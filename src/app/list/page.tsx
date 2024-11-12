@@ -1,13 +1,11 @@
 import { getServerSession } from 'next-auth';
 import { Col, Container, Row } from 'react-bootstrap';
 import { prisma } from '@/lib/prisma';
-// import StuffItem from '@/components/StuffItem';
 import { loggedInProtectedPage } from '@/lib/page-protection';
 import { authOptions } from '@/app/api/auth/[...nextauth]/route';
 import { Contact } from '@prisma/client';
 import ContactCard from '@/components/ContactCard';
 
-/** Render a list of stuff for the logged in user. */
 const ListPage = async () => {
   // Protect the page, only logged in users can access it.
   const session = await getServerSession(authOptions);

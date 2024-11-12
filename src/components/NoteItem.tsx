@@ -3,7 +3,7 @@
 import { ListGroup } from 'react-bootstrap';
 import { Note } from '@prisma/client';
 
-/* Renders a single note in the List Stuff table. See list/page.tsx. */
+/* Renders a single note in the List table. See list/page.tsx. */
 const NoteItem = ({ note }: { note: Note }) => (
   <ListGroup.Item>
     <p className="fw-lighter">{note.createdAt.toLocaleDateString('en-US')}</p>
